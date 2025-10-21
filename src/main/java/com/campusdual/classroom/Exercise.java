@@ -32,13 +32,29 @@ public class Exercise {
     public static String getBall() {
         String color = "";
 
-        if (randomWithRange(1, 3) == 1) {
+        switch (randomWithRange(1, 3)) {
+            case 1:
+                color = "rojo";
+                break;
+            case 2:
+                color = "azul";
+                break;
+            case 3:
+                color = "verde";
+                break;
+            default:
+                    break;
+        }
+        return color;
+
+        /*if (randomWithRange(1, 3) == 1) {
             return color = "rojo";
         } else if (randomWithRange(1, 3) == 2) {
             return color = "azul";
         } else {
             return color = "verde";
-        }
+        } */
+
     }
 
     public static int randomWithRange(int min, int max) {
